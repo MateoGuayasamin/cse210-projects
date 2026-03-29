@@ -1,0 +1,31 @@
+What is Encapsulation and Why is it Important?
+1. What it means
+Encapsulation means "hiding the guts" of your code. It’s like a pill capsule: all the medicine is tucked away inside, and you only interact with the smooth outside. In programming, it means we keep our data (variables) private and only let other parts of the program talk to them through specific methods.
+
+2. Why it’s helpful
+The main benefit is Safety. If I make my variables private, other parts of the program can't accidentally "mess them up." It prevents bugs because the class is the only one in charge of its own information.
+
+3. How we used it
+In our program, we used encapsulation to handle the words. The rest of the program doesn't need to know how to turn a word into underscores; it just asks the word to "show itself," and the word handles the logic internally.
+
+4. Example from my code
+Check out how I used the private keyword to protect the text of the word:
+
+C#
+public class Word
+{
+    // These are private so no one else can change them by mistake
+    private string _text;
+    private bool _isHidden;
+
+    // This is public so the program can ask for the text, 
+    // but the Word class decides whether to show letters or underscores.
+    public string GetDisplayText()
+    {
+        if (_isHidden)
+        {
+            return new string('_', _text.Length);
+        }
+        return _text;
+    }
+}
