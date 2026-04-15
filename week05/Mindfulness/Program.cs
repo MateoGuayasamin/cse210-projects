@@ -13,7 +13,7 @@ class Program
             Console.WriteLine("Menu Options:");
             Console.WriteLine("1.Start breathing activity");
             Console.WriteLine("2.Start Reflecting activity");
-            Console.WriteLine("2.Start Listing activity");
+            Console.WriteLine("3.Start Listing activity");
             Console.WriteLine("4.Quit");
             Console.WriteLine("Select a choise from menu:");
             option = Console.ReadLine();
